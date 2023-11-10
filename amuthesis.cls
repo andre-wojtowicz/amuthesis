@@ -826,7 +826,7 @@
     \egroup%
     \markboth{#2}{#2}%
   }{%
-    \stepcounter{chapter}
+    \refstepcounter{chapter}
     \protected@edef\@currentlabel{\p@chapter\thechapter}%
     \bgroup%
     \fontsize{14pt}{24pt}\selectfont\centering%
@@ -856,16 +856,16 @@
   \vskip 1 \baselineskip
   \IfBooleanTF{#1}{%
     \bgroup%
-    \fontsize{14pt}{18pt}\selectfont\centering%
+    \fontsize{18pt}{20pt}\selectfont\centering%
     \textsc{#2}\par%
     \vskip 0.75 \baselineskip%
     \egroup%
     \markright{#2}%
   }{%
-    \stepcounter{section}
+    \refstepcounter{section}
     \protected@edef\@currentlabel{\p@section\thesection}%
     \bgroup%
-    \fontsize{14pt}{18pt}\selectfont\centering%
+    \fontsize{18pt}{20pt}\selectfont\centering%
     \if@optpolski
       \phantomsection
       \addcontentsline{toc}{section}{\thesection.~\hskip 0.25em #2}%
@@ -902,7 +902,7 @@
     \egroup%
     \markright{#2}%
   }{%
-    \stepcounter{subsection}
+    \refstepcounter{subsection}
     \protected@edef\@currentlabel{\p@subsection\thesubsection}%
     \bgroup%
     \noindent
@@ -932,6 +932,23 @@
   \nopagebreak[4]
 }
 
+\makeatletter
+\newcommand{\sectionauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{3}\large\scshape#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading
+}
+\makeatother
+
+\makeatletter
+\newcommand{\subsectionauthor}[1]{%
+  {\parindent0pt\vspace*{-25pt}%
+  \linespread{3}\scshape#1%
+  \par\nobreak\vspace*{20pt}}
+  \@afterheading
+}
+\makeatother
 % ======================================================== %
 % Paginy                                                   %
 % ======================================================== %
@@ -964,4 +981,10 @@
   \cfoot{\small\thepage}
 }
 
+% ======================================================== %
+% Równania i funkcje                                       %
+% ======================================================== %
+\newenvironment{conditions}
+  {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
+  {\end{tabular}\par\vspace{\belowdisplayskip}}
 \endinput

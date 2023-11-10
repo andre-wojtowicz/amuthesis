@@ -1,0 +1,146 @@
+% ======================================================== %
+% Przeczytaj plik amuthesis-doc.pdf, aby poznać opcje      %
+% klasy `amuthesis`                                        %
+% ======================================================== %
+\documentclass[oneside,polski,logo]{amuthesis}
+
+% Zdefiniuj kodowanie pliku źródłowego (domyślnie utf8)
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+
+% ======================================================== %
+% Dane autorów i pracy                                      %
+% ======================================================== %
+
+% --- Autorzy prac
+% --- --- Imię i nazwisko
+% --- --- Numer albumu
+% --- --- Płeć (M/K)
+\firstAuthor{Jan Kowalski}
+\firstAlbum{123456}
+\stsexFirstAuthor{M}
+
+\secondAuthor{Marianna Nowak}
+\secondAlbum{234561}
+\stsexSecondAuthor{F}
+
+%\thirdAuthor{Autor Trzeci}
+%\thirdAlbum{345612}
+%\stsexThirdAuthor{M}
+
+%\fourthAuthor{Autor Czwarty}
+%\fourthAlbum{456123}
+%\stsexFourthAuthor{F}
+
+% --- Tytuł pracy (w języku polskim i angielskim)
+\titlePL{Moja praca}
+\titleEN{My thesis}
+% --- Typ pracy (inżynierska, licencjacka, magisterska)
+\type{inżynierska}
+% --- Wydział (wykaz skrótów):
+% --- --- WA    --- Wydział Anglistyki
+% --- --- WAiK  --- Wydział Antropologii i Kulturoznawstwa
+% --- --- WAr   --- Wydział Archeologii
+% --- --- WB    --- Wydział Biologii
+% --- --- WCh   --- Wydział Chemii
+% --- --- WFPiK --- Wydział Filologii Polskiej i Klasycznej
+% --- --- WFi   --- Wydział Filozoficzny
+% --- --- WF    --- Wydział Fizyki
+% --- --- WGSE  --- Wydział Geografii Społeczno-Ekonomicznej i Gospodarki Przestrzennej
+% --- --- WH    --- Wydział Historii
+% --- --- WMiI  --- Wydział Matematyki i Informatyki
+% --- --- WNGiG --- Wydział Nauk Geograficznych i Geologicznych
+% --- --- WNoS  --- Wydział Nauk o Sztuce
+% --- --- WNPiD --- Wydział Nauk Politycznych i Dziennikarstwa
+% --- --- WN    --- Wydział Neofilologii
+% --- --- WPiK  --- Wydział Psychologii i Kognitywistyki
+% --- --- WPAK  --- Wydział Pedagogiczno-Artystyczny w Kaliszu
+% --- --- WPiA  --- Wydział Prawa i Administracji
+% --- --- WS    --- Wydział Socjologii
+% --- --- WSE   --- Wydział Studiów Edukacyjnych
+% --- --- WT    --- Wydział Teologiczny
+% --- --- IKE   --- Instytut Kultury Europejskiej w Gnieźnie
+\faculty{WMiI}
+% --- Kierunek (w mianowniku)
+\field{informatyka}
+% --- Specjalność (w formie mianownikowej)
+% --- (ustaw puste, jeśli bez specjalności)
+\specialty{}
+% --- Promotor (w dopełniaczu)
+\supervisor{prof. UAM dra hab. Jana Nowaka}
+% --- Data złożenia pracy (Miasto, miesiąc rok)
+\date{Poznań, grudzień 2020}
+
+% --- Zgoda na udostępnienie pracy w czytelni (TAK/NIE)
+\stread{TAK}
+% --- Zgoda na udostępnienie pracy w zakresie ochrony (TAK/NIE)
+\stprotect{TAK}
+% --- Data podpisania oświadczenia (Miasto, data)
+\stdate{Poznań, \today{} r.}
+
+% ======================================================== %
+% Dodatkowe pakiety wykorzystywane w pracy                 %
+% ======================================================== %
+
+\usepackage{lipsum}
+
+% ======================================================== %
+% Zasadnicza część dokumentu                               %
+% ======================================================== %
+
+\begin{document}
+
+% Strona tytułowa
+\maketitle
+% Oświadczenie
+\makestatement
+
+% Blok abstraktu w języku polskim
+\begin{streszczenie}
+\lipsum[1]
+
+\paragraph{Słowa kluczowe:} klasa
+\end{streszczenie}
+
+% Blok abstraktu w języku angielskim
+\begin{abstract}
+\lipsum[2]
+
+\paragraph{Keywords:} klasa
+\end{abstract}
+
+% Opcjonalny blok dedykacji
+\begin{dedykacja}
+Tu możesz umieścić swoją dedykację.
+\end{dedykacja}
+
+% Spis treści
+\tableofcontents
+
+% ======================================================== %
+% Właściwa część pracy                                     %
+% ======================================================== %
+
+\chapter{Treść naszej pracy}
+
+\section{Zakres ogólny tematyki}
+
+\sectionauthor{Jan Kowalski}
+
+\lipsum[3]
+
+\section{Zakres szczegółowy tematyki}
+
+\subsection{Coś o teorii}
+
+\subsectionauthor{Marianna Nowak}
+
+\lipsum[2]
+
+\subsection{Coś o praktyce}
+
+\subsectionauthor{Jan Kowalski}
+
+\lipsum[2]
+
+\end{document}
